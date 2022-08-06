@@ -39,7 +39,7 @@ function reveal() {
 }
  if (orientationSupport && desktop) {
 window.addEventListener("scroll", reveal);
- document.querySelector('#reveal').classList.remove('active')
+reveals[i].classList.add("active");
  }
 
 /*
