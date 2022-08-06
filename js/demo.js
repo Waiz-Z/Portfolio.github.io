@@ -37,13 +37,7 @@ function reveal() {
  document.querySelector('#reveal').classList.remove('active')
 }
 }
- if (orientationSupport && desktop) {
-	  var reveals = document.querySelectorAll(".reveal");
-window.addEventListener("scroll", reveal);
-for (var i = 0; i < reveals.length; i++) {
-reveals[i].classList.add("active");
- }
- }
+
 
 /*
 // jQuery plugin example:
