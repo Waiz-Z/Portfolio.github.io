@@ -4,13 +4,6 @@
  */
 
 // This can be used to set the Particles Effects. Check README for more details!
-  var desktop = !navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i);
-    var orientationSupport = !!window.DeviceOrientationEvent;
-    var tiltX = 0;
-    var pointerX;
-    var pointerY;
-    var tiltY = 0;
-	
 document.addEventListener('DOMContentLoaded', function () {
   particleground(document.getElementById('particles'), {
     dotColor: '	#FF1493',
@@ -37,6 +30,8 @@ function reveal() {
  document.querySelector('#reveal').classList.remove('active')
 }
 }
+
+window.addEventListener("scroll", reveal);
 
 
 /*
