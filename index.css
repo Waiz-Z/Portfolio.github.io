@@ -134,15 +134,7 @@ img {
 .active.fade-bottom {
   animation: fade-bottom 1s ease-in;
 }
-.active.fade-left {
-  animation: fade-left 1s ease-in;
-  animation-iteration-count: 1;
-  
-}
-.active.fade-right {
-  animation: fade-right 1s ease-in;
-  animation-iteration-count: 1;
-}
+
 @keyframes fade-bottom {
   0% {
     transform: translateY(50px);
