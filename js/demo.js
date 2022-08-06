@@ -4,6 +4,7 @@
  */
 
 // This can be used to set the Particles Effects. Check README for more details!
+  var desktop = !navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i);
 document.addEventListener('DOMContentLoaded', function () {
   particleground(document.getElementById('particles'), {
     dotColor: '	#FF1493',
@@ -19,7 +20,7 @@ function reveal() {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
     var elementVisible = 150;
-    if (elementTop < windowHeight - elementVisible) {
+    if (elementTop < windowHeight - elementVisible && desktop) {
       reveals[i].classList.add("active");
     } else {
       
@@ -30,10 +31,11 @@ function reveal() {
  document.querySelector('#reveal').classList.remove('active')
 }
 }
-
+ if (orientationSupport && !desktop) {
+	  document.querySelector('#reveal').classList.remove('active')
+	 
+ }
 window.addEventListener("scroll", reveal);
-
-
 /*
 // jQuery plugin example:
 $(document).ready(function() {
